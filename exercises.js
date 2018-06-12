@@ -28,9 +28,14 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
  *
  * The function will return true if the number passed into the function is equal to or greater than Hawaii's voting age. Console.log your result.
 */
-console.log('test');
-console.log('another test')
-
+function canVote(age){
+  if(age>=21){
+    return true
+  }else{
+    return false
+  }
+}
+console.log(canVote(53))
 /*
  * #2
  * Function - login
@@ -42,8 +47,12 @@ console.log('another test')
  * The function will return the message: "Login Success!", if the string passed into the function is "test1234"
  * Console.log your result.
 */
-
-
+function login(password){
+if(password==='test1234'){
+  return "Login Success!";
+}
+}
+console.log(login('test1234'))
 /*
  * #3
  * Function - isGreaterThan
@@ -57,7 +66,14 @@ console.log('another test')
  * Console.log your result.
 */
 
-
+var first = 10
+var second = 8
+function isGreaterThan(first, second){
+  if (first>second){
+  return true
+}
+}
+console.log(isGreaterThan(first))
 
 /*
  * #4
@@ -70,8 +86,12 @@ console.log('another test')
  * The function will return true if the value passed into the function is "true".
  * Console.log your result.
 */
-
-
+function mustBeTrue(boo){
+if(boo===31){
+  return true
+}
+}
+console.log(mustBeTrue(31))
 
 /*
  * #5
@@ -84,9 +104,13 @@ console.log('another test')
  * The function will return the message "Word to Big Bird!", if the string passed into the function is a three-letter word. 
  * Console.log your result.
 */
-
-
-
+//function bigBird(word){
+ // var word = 'cat'
+ // if(word=str.slice(3)){
+ // return "Word to Big Bird!";
+//}
+//}
+//console.log(bigBird(word))
 /*
  * #6
  * Function - isEqual
@@ -99,8 +123,16 @@ console.log('another test')
  * If the strings are equal, the function will return the message "You look mahvelous!" Otherwise, return the message: "I don't know who you are anymore." 
  * Console.log your result.
 */
-
-
+var first = 10
+var second = 8
+function isEqual(first, second){
+if(first - 2 == second){
+  return "You look mahvelous!"
+}else{
+  return "I don't know who you are anymore."
+}
+}
+console.log(isEqual())
 /*
  * #7
  * Function - notEqual
@@ -113,8 +145,16 @@ console.log('another test')
  * If the strings are not equal, the function will return the message "Opposites do attract." Otherwise, return the message: "Cause it's like you're my mirror." 
  * Console.log your result.
 */
-
-
+var first = 13
+var second = 42
+function notEqual(first, second){
+  if(first===second){
+    return "Opposites do attract."
+  }else{
+    return "Cause it's like you're my mirror"
+  }
+}
+console.log(notEqual())
 /*
  * #8
  * Function - spareChange
@@ -126,7 +166,15 @@ console.log('another test')
  * The function will return true if the number passed into the function is greater than 100, otherwise it will return false.
  * Console.log your result.
 */ 
-
+function spareChange(money){
+  if(money>=100){
+    return true
+  }else{
+    return false
+  }
+}
+console.log("money: ", spareChange(99))
+console.log("money: ", spareChange(101))
 
 
 /*
@@ -143,7 +191,15 @@ console.log('another test')
  * Console.log your result.
 */ 
 
-
+function dirty30(one, two, three){
+  if(one + two + three >30){
+    return true
+  }else{
+    return false
+  }
+}
+console.log("dirty30: ", dirty30(10, 12, 8))
+console.log("dirty30: ", dirty30(19, 20, 21))
 
 /*
  * #10
@@ -156,9 +212,16 @@ console.log('another test')
  * The function will return true if the number passed in is an even integer, otherwise it will return false.
  * Console.log your result.
 */ 
-
-
-
+function evenStevens(num){
+  var checkEven = num % 2
+  if(checkEven = 0){
+    return true
+  }else{
+    return false
+  }
+}
+console.log("even: ", evenStevens(3))
+console.log("even: ", evenStevens(4))
 
 /*
  * #11
@@ -172,8 +235,14 @@ console.log('another test')
  * If BOTH values are 21 or over, the function will return the message: "Welcome to the Legends Lounge." Otherwise, it will return the message: "Chuck E Cheese is across the street."
  * Console.log your result.
 */ 
-
-
+function daClub(cover, age){
+  if(cover>=21&&age>=21){
+    return "Welcome to the Legends Lounge."
+  }else{
+    return "Chuck E Cheese is across the street"
+  }
+}
+console.log(daClub(10, 20))
 /*
  * #12
  * Function - graduation
@@ -186,8 +255,14 @@ console.log('another test')
  * If EITHER the number value is greater than or equal to 120 or the boolean value is true, then the function will return the message: "Congratulations on a job well done." Otherwise, return the message: "See you in summer school."
  * Console.log your result.
 */ 
-
-
+function graduation(credits, thesis){
+  if(credits>=120||thesis === true){
+  return "Congratulations on a job well done.";
+  }else{
+  return "See you in summer school."
+  }
+}
+console.log(graduation(119, true))
 
 /*
  * #13
@@ -200,8 +275,18 @@ console.log('another test')
  * The function will return the message: "You are riding Honolulu's Rail.", if the number value is less than 50, otherwise it will return the message: "You are riding an Amtrak.", if the number value is less than 100, and return the message: "Now you ballin' in the Shinkansen!", if the number value is greater than or equal to 100.
  * Console.log your result.
 */ 
-
-
+function moneyTrain(speed){
+  if(speed<50){
+    return "You are riding Honolulu's rail.";
+  }else if(speed<100){
+    return "You are riding an Amtrak.";
+  }else if(speed>=100){
+    return "Now you ballin' in the Shinkansen!";
+  }
+}
+console.log("4 MPH ", moneyTrain(4))
+console.log("75 MPH ", moneyTrain(75))
+console.log("125 MPH ", moneyTrain(125))
 /*
  * #14
  * Function - buyDoughnut
@@ -215,12 +300,44 @@ console.log('another test')
  * Invoke your function again.
  * Console.log budget and doughnutBought again.
 */ 
-
+var budget = 25
+var doughnutPrice = 5
+var doughnutBought = 0
+function buyDoughnut(){
+  var byeMoney = (budget-doughnutPrice)
+  return "New Budget = " + byeMoney++ + " Doughnuts owned " + doughnutBought++;
+}
+console.log(buyDoughnut())
+console.log(buyDoughnut())
 /*Final Boss*/
 /*Create a function name dailySpecials which takes in a parameter: `special`.
 Inside the function, create a switch statement that will check the daily specials of your favorite restaurant (or make up your own daily specials for each day of the week.*/
+var day = 'Monday';
+var menu = null
 
-
+switch (day) {
+  case 'Monday':
+  menu = 'Apple Pie';
+  break;
+case 'Tuesday':
+menu = "Blueberry Waffles";
+break;
+case 'Wednesday':
+menu = 'Cherry Pancakes';
+break;
+case 'Thursday':
+menu = 'Deli Breakfast Meats';
+break;
+case 'Friday':
+menu = 'Eggapalooza';
+break;
+case 'Saturday':
+menu = 'Fried Coffee';
+break;
+case 'Sunday':
+menu = 'Grilled PBJ';
+}
+console.log(menu)
 
 /*
 For loops - A for loop checks a condition a specific number of times and allows us to execute a code block and evaluate a condition to determine if our loop should run again.
